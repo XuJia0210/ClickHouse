@@ -59,9 +59,6 @@
 [submodule "contrib/thrift"]
 	path = contrib/thrift
 	url = https://github.com/apache/thrift.git
-[submodule "contrib/libhdfs3"]
-	path = contrib/libhdfs3
-	url = https://github.com/ClickHouse/libhdfs3.git
 [submodule "contrib/libxml2"]
 	path = contrib/libxml2
 	url = https://github.com/GNOME/libxml2.git
