@@ -694,4 +694,6 @@ target_compile_definitions(_krb5 PRIVATE
 
 target_link_libraries(_krb5 PRIVATE OpenSSL::Crypto OpenSSL::SSL)
 
+target_compile_options (_krb5 PRIVATE -Wno-implicit-function-declaration)
+
 add_library(ch_contrib::krb5 ALIAS _krb5)

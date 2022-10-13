@@ -7,6 +7,7 @@ set (SRCS
     ConfigHelper.cpp
 )
 
+
 add_library(clickhouse_common_config ${SRCS})
 target_link_libraries(clickhouse_common_config
     PUBLIC
@@ -26,6 +27,8 @@ target_link_libraries(clickhouse_common_config_no_zookeeper_log
     PRIVATE
         string_utils
 )
+
+target_compile_options (clickhouse_common_config PRIVATE -Wno-deprecated)
 
 if (TARGET ch_contrib::yaml_cpp)
     target_link_libraries(clickhouse_common_config PRIVATE ch_contrib::yaml_cpp)

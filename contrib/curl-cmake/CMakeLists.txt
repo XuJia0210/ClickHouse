@@ -169,6 +169,6 @@ target_include_directories (_curl SYSTEM PUBLIC
 target_link_libraries (_curl PRIVATE OpenSSL::SSL)
 
 # The library is large - avoid bloat (XXX: is it?)
-target_compile_options (_curl PRIVATE -g0)
+target_compile_options (_curl PRIVATE -g0 -Wno-implicit-function-declaration)
 
 add_library (ch_contrib::curl ALIAS _curl)
